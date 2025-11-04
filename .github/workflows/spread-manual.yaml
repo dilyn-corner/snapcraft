@@ -70,7 +70,9 @@ jobs:
           path: tests
       - name: Kernel plugin test
         run: |
-          spread google:ubuntu-22.04-64:tests/spread/plugins/craft-parts/kernel
+          spread google:ubuntu-20.04-64:tests/spread/plugins/v2/kernel \
+          spread google:ubuntu-22.04-64:tests/spread/${{ matrix.type }}/kernel
+            google:ubuntu-22.04-64:tests/spread/plugins/craft-parts/kernel-cross
 
   remote-build:
     needs: [predicate, snap-build]
