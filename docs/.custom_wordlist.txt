@@ -163,8 +163,8 @@ sed
 sequenceDiagram
 sitecustomize
 sitemapindex
-smbraille
 smscript
+snakeoil
 snapcraftctl
 snapctl
 Sphinx
