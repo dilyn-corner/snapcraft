@@ -153,7 +153,7 @@ class InitrdPlugin(plugins.Plugin):
 
         # URL pieces for Ubuntu base, tarball name
         # URL changed as of 26.04 release, set as default value
-        tar_base_url = "https://cdimage.ubuntu.cim/ubuntu-base/releases"
+        tar_base_url = "https://cdimage.ubuntu.com/ubuntu-base/releases"
         tar_release = f"{release_codename}/release"
         tar_name = f"ubuntu-base-{release_number}-base-{target_arch}.tar.gz"
 
