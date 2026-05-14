@@ -307,7 +307,8 @@ install_kernel() {
   # Install device trees, if required
   if [ "${CRAFT_ARCH_BUILD_FOR}" != "amd64" ]; then
     echo "Installing device trees..."
-    make -j "${CRAFT_PARALLEL_BUILD_COUNT}"              \
+    # install dtbs with -j1, some 6.x kernel error with race over mkdir
+    make -j 1                                            \
          -C "${KERNEL_SRC}"                              \
           O="${CRAFT_PART_BUILD}"                        \
           INSTALL_DTBS_PATH="${CRAFT_PART_INSTALL}/dtbs" \
