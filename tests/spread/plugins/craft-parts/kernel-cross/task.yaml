@@ -11,7 +11,7 @@ restore: |
   snapcraft clean
   rm -f ./*.snap
 
-execute: |-
+execute: |
   # Unset SNAPCRAFT_BUILD_ENVIRONMENT=host.
   unset SNAPCRAFT_BUILD_ENVIRONMENT
 
